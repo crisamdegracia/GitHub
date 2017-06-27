@@ -1,0 +1,488 @@
+<!--
+
+<?php
+$errorString = ""; $successMessage ="";
+
+if($_POST){
+
+
+if(!$_POST["email"] == ""){
+$errorString."Email field required from PHP<br>";
+}
+
+if(!$_POST["subject"] == ""){
+$errorString."Email field required from PHP<br>";
+}
+
+if(!$_POST["textarea"] == ""){
+$errorString."Email field required From PHP<br>";
+}
+
+if($_POST["email"] && filter_var($_POST['email'], FILTER_VALIDATE_EMAIL) === false){
+
+$errorString."Email address is invalid from PHP<br>";
+
+}
+
+if ($errorString !== ""){
+
+$errorString = '<div class="alert alert-danger " role="alert"><p><strong>'.errorString.'</strong></p></div>';
+
+}
+
+else {
+$mailTo = "crisamdegracia@gmail.com";
+$subject = $_POST['subject'];
+$content = $_POST['textarea'];
+$headers = $_POST['email'];
+}
+
+if (mail($mailTo,$subject,$content,$headers)){
+
+$successMessage =  '<div class="alert alert-success" role="alert"><p><strong>Email has been sent successfully! PHP</strong></p></div>';
+
+}
+
+else {
+
+$errorString = '<div class="alert alert-danger " role="alert"><p><strong>Email has been sent successfully! PHP </strong></p></div>';
+
+}
+}
+?>
+
+
+
+
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+
+        <!--        <link href="font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css">-->
+        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="style.css" type="text/css">
+
+    </head>
+
+    <body data-spy="scroll" data-target="#navId" data-offset="80">
+
+        <nav class="navbar navbar-toggleable-md fixed-top navbar-inverse p-1" style="background-color:#333" id="navId">
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand ml-5" href="#home">Kambal Works</a>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="nav nav-tabs offset-" role="tablist">
+                    <li class="nav-item ">
+                        <a class="nav-link active" href="#projects">Projects<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link " href="#services">Services<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link " href="#about">About<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link " href="#testimonials">Reviews<span class="sr-only">(current)</span></a>
+                        
+                    </li>
+                 <li class="nav-item ">
+                        <a class="nav-link " href="#mailus">Email<span class="sr-only">(current)</span></a>
+                        
+                    </li>
+                <li class="nav-item ">
+                        <a class="nav-link " href="#contact">Contact<span class="sr-only">(current)</span></a>
+                        
+                    </li>
+                </ul>
+
+            </div>
+        </nav><!--NAV-->
+
+        <section id="home">
+
+            <div class="container text-center mt-5">
+
+                <div class="jumbi text-center" >
+
+                    <h1 id="firstheader">Kambal Glass Aluminum  and Iron Works. </h1> 
+                    <img src="/kamballogo.jpg"  id="kamballogo" alt="skull-steel">
+                    <hr class="text-lead">
+                    <a href="#contact" class="btn btn-success btn-lg contact-btn">Contact us</a>
+                </div>
+            </div>
+        </section> <!--Front Page-->
+
+
+        <!--------------------CAROUSEL------------------------------------------------->
+        <section id="projects">
+            <div class="text-center mid-fixer">
+                <h2 class="secondheader">Our Projects</h2>
+                <h4 class="text-lead mid-text"> look at our previous project models on our slides</h4>
+            </div>
+
+
+            <div class="container">
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="6"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="7"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="8"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="9"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="10"></li>
+                    </ol>
+
+                    <div class="carousel-inner" role="listbox">
+
+                        <div class="carousel-item active">
+                            <img class="d-block img-fluid" src="image/cr1.jpg" alt="First slide">
+                        </div><!--slide 1-->
+
+                        <div class="carousel-item">
+                            <img class="d-block img-fluid" src="image/x1.jpg" alt="Second slide">
+                            <!--slide 2--></div>
+
+                        <div class="carousel-item">
+                            <img class="d-block img-fluid" src="image/x10.jpg" alt="Third slide">
+                        </div><!--slide 3-->
+
+                        <div class="carousel-item">
+                            <img class="d-block img-fluid" src="image/x2.jpg" alt="forth slide">
+                        </div><!--slide 4-->
+
+                        <div class="carousel-item">
+                            <img class="d-block img-fluid" src="image/x3.jpg" alt="fifth slide">
+                        </div>
+
+                        <div class="carousel-item">
+                            <img class="d-block img-fluid" src="image/x4.jpg" alt="sixth slide">
+                        </div>
+
+                        <div class="carousel-item">
+                            <img class="d-block img-fluid" src="image/x5.jpg" alt="seventh slide">
+                        </div>
+
+                        <div class="carousel-item">
+                            <img class="d-block img-fluid" src="image/x6.jpg" alt="eight slide">
+                        </div>
+
+                        <div class="carousel-item">
+                            <img class="d-block img-fluid" src="image/x7.jpg" alt="Third slide">
+                        </div>
+
+                        <div class="carousel-item">
+                            <img class="d-block img-fluid" src="image/x8.jpg" alt="Third slide">
+                        </div>
+
+                        <div class="carousel-item">
+                            <img class="d-block img-fluid" src="image/x9.jpg" alt="Third slide">
+                        </div>
+
+                        <div class="carousel-item">
+                            <img class="d-block img-fluid" src="image/z1.jpg" alt="Third slide">
+                        </div>
+
+                        <div class="carousel-item">
+                            <img class="d-block img-fluid" src="image/z2.jpg" alt="Third slide">
+                        </div>
+
+                        <div class="carousel-item">
+                            <img class="d-block img-fluid" src="image/z3.jpg" alt="Third slide">
+                        </div>
+
+                        <div class="carousel-item">
+                            <img class="d-block img-fluid" src="image/z4.jpg" alt="Third slide">
+                        </div>
+
+                        <div class="carousel-item">
+                            <img class="d-block img-fluid" src="image/z5.jpg" alt="Third slide">
+                        </div>
+
+                        <div class="carousel-item">
+                            <img class="d-block img-fluid" src="image/z6.jpg" alt="Third slide">
+                        </div>
+
+
+
+                        <div class="carousel-item">
+                            <img class="d-block img-fluid" src="image/y1.jpg" alt="Third slide">
+                        </div>
+
+                        <div class="carousel-item">
+                            <img class="d-block img-fluid" src="image/y2.jpg" alt="Third slide">
+                        </div>
+
+                        <div class="carousel-item">
+                            <img class="d-block img-fluid" src="image/y3.jpg" alt="Third slide">
+                        </div>
+
+                        <div class="carousel-item">
+                            <img class="d-block img-fluid" src="image/y4.jpg" alt="Third slide">
+                        </div>
+
+                        <div class="carousel-item">
+                            <img class="d-block img-fluid" src="image/y5.jpg" alt="Third slide">
+                        </div>
+
+                        <div class="carousel-item">
+                            <img class="d-block img-fluid" src="image/y6.jpg" alt="Third slide">
+                        </div>
+
+                        <div class="carousel-item">
+                            <img class="d-block img-fluid" src="image/y7.jpg" alt="Third slide">
+                        </div>
+
+                        <div class="carousel-item">
+                            <img class="d-block img-fluid" src="image/y8.jpg" alt="Third slide">
+                        </div>
+
+                        <div class="carousel-item">
+                            <img class="d-block img-fluid" src="image/y9.jpg" alt="Third slide">
+                        </div>
+
+                        <div class="carousel-item">
+                            <img class="d-block img-fluid" src="image/y10.jpg" alt="Third slide">
+                        </div>
+                    </div>
+
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+
+
+            </div>
+        </section><!--Carousel-->
+
+        <!------------------------>
+
+
+
+
+        <!-------------------------SERVICES------------------------------------------>
+
+
+        <section id="services">
+            <div class="text-center mid-fixer">
+                <h2 class="secondheader text-service">Our Services</h2>
+            </div>
+            <div class="container service-section">
+                <div class="row text-center">
+
+                    <div class="col-lg-4 col-md-4 col-sm-4">
+                        <img class="img-thumbnail service-icon" src="image/icon-1.png" alt="hammer">
+                        <p class="servicetext text-center x">Repairs</p>
+                        <p class="excerpt x">
+                            We repair broken Fences, repaint walls, rusty gates or your old sidecar. We will fit it for you! 
+                        </p>  
+                    </div>
+
+
+                    <div class="col-lg-4 col-md-4 col-sm-4">
+                        <img class="img-thumbnail service-icon" src="image/icon-2.png" alt="hammer">
+                        <p class="servicetext text-center x">Install</p>  
+                        <p class="excerpt x">
+                            We install Gates, Windows, Fences, Roof, Glass Panels and a lot more! Contact us and lets talk.
+                        </p> 
+
+                    </div>
+
+
+                    <div class="col-lg-4 col-md-4 col-sm-4">
+                        <img class="img-thumbnail service-icon" src="image/icon-3.png" alt="hammer">
+                        <p class="servicetext text-center x">Build</p>     
+                        <p class="excerpt x" >
+                            We can build custom made Stalls, Tricycle sidecar, 
+                            we can build house and there's a lot more! Send us a message and get a <strong>DISCOUNT!</strong>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </section> <!--SERVICES-->
+
+
+
+
+
+        <!--------ABOUT US------>
+
+
+        <section id="about">
+            <div class="text-center mid-fixer">
+                <h2 class="secondheader" id="text-about">About us</h2>
+            </div>
+
+            <div class="container">
+                <div class="row">
+                    <div class="text-center col-lg-6 offset-lg-3">
+                        <p class="excerpt"  id="about-excerpt">
+                            We are an independently owned a workshop that specializes in servicing, repairing and restoring a wide variety of glass, aluminum and iron models. We ensure our work meets the highest industry standards.
+
+
+                            <br>
+                            <br>
+
+
+                            Our goal is to be a service provider leader. We’ll go extra mile to earn the trust of our clients, and believe in providing the highest level of service in all areas of our expertise. Our craft is our pride, so leave your broken doors and windows  with pros who really care.</p>
+
+                    </div><!--text center COl-->
+                </div><!--row-->
+            </div><!--container-fluid-->
+        </section><!--about-->
+
+
+
+        <!--TESTIMONIALS-->
+
+        <section id="testimonials">
+            <div class="container">
+
+                <div class="text-center mid-fixer">
+                    <h2 class="secondheader" id="text-about" style="color:#FFF039;">What our customer tells about us?</h2>
+                </div>
+                <div class="row">
+
+                    <div class="col-lg-4 col-md-4 col-sm-4">
+                        <h2 class="comment-header"> Mr. Gomez </h2>
+                        <hr class="linya w-25">
+                        <p class="comments"> <span class="spl">&quot;</span> 
+
+                            Mahusay ung pinagawa kong grills sa bintana, napaka profesional nila gumawa. Mura at napaka bilis pa.
+                            Hindi ako nag kamali sa pag hire sakanila. Maraming salamat Kambal Works!
+                        </p>
+                    </div><!--col-->
+
+
+
+                    <div class="col-lg-4 col-md-4 col-sm-4">
+                        <h2 class="comment-header">Ms. Jenny </h2>
+                        <hr class="linya w-25">
+                        <p class="comments">   
+                            <span class="spl">&quot;</span> 
+                            Nag pagawa ako ng bahay sa Kambal Works grabe hindi ko ineexpect na beyond expectations pala
+                            ang kalalabasan, So I recommend Kambal Works para sa mga ibat ibang pangangailangan nio like gate, wall painting and etc.
+                            fast and beautiful finished product!
+
+                        </p>
+                    </div><!--col-->
+
+
+
+                    <div class="col-lg-4 col-md-4 col-sm-4">
+                        <h2 class="comment-header">Manong Oka</h2>
+                        <hr class="linya w-25">
+                        <p class="comments"><span class="spl">&quot;</span> 
+                            I recommend this briliant individuals who works with passion and excellence. 
+                            pina-renovate ko ung motor kong luma para sa bayaw ko, and guess what ? hind ko nakilala ung 
+                            ipinresent nilang motor akala ko nag bibiro lang, sobrang ganda kasi hindi mo aakalaing from luma sya.
+                            definitely a worth hiring individuals.
+                        </p>
+                    </div><!--col-->
+
+                </div><!--row-->
+
+            </div>
+        </section><!--TESTIMONIALS-->
+
+
+        <!-----PARALAX-->
+        <section id="paralax">
+            <div class="container-fluid">
+
+            </div>
+        </section><!--paralax-->
+
+
+        <!--FORMS-->
+
+        <section id="mailus">
+
+            <div class="container">
+                <h1 class=""> Message us</h1>
+                <small class="text-lead"> or text us.  just a bit more scroll down  and you will see our mobile number</small>
+                <form action="">
+                    <div class="form-group">
+                        <label for="name" class="label-text">Name</label>
+                        <input type="text" class="form-control" placeholder="Juan DeLa Cruz">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="name" class="label-text">Contact No.</label>
+                        <input type="text" class="form-control" placeholder="+63-987-654-321">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="name" class="label-text">Message us</label>
+                        <textarea type="text" class="form-control"> </textarea>
+                    </div>
+                    <button class="btn btn-success btn-lg">submit</button>
+                </form>
+
+            </div>
+        </section>
+
+
+
+        <!--FOOTER-->
+        <footer id="contact">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                        <h4>Contact Us!</h4>
+                        <p>Mobile no: 0915-280-4447</p>
+                        <p>Address: Section 14a Phase 7 Brookeside Lane Gen. Trias Cavite </p>
+                        <p>Email: songcuyadave64@gmail.com</p>
+                    </div>
+
+                    <div class="col-lg-6 col-md-6 col-sm-6  col-xs-6  text-center">
+                        <h4>Like us in Facebook</h4>
+                        <a href="#"><i class="fa fa-facebook"></i> </a>
+
+                    </div>
+
+                   
+                </div><!--row-->
+            </div>
+        </footer>
+
+
+
+
+
+
+        <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script> 
+
+        <script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
+
+
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+
+
+    </body>
+</html>

@@ -1,0 +1,23 @@
+<div class="row">
+  <div class="col-xs-12">
+    <button class="btn btn-success"> New Recipe</button>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-12" *ngFor="let data of recipes; let i = index">
+    <a href="#" class="list-group-item clearfix">
+      <div class="pull-left">
+        <h4 class="list-group-item-heading">
+          {{ data.name }}
+        </h4>
+        <p class="list-group-item-text">{{ data.description }}</p>
+      </div>
+      <span class="pull-right">
+        <!-- Property Binded -->
+        <img [src]="data.imagePath" class="img-fluid"  style="max-height: 50px;" alt="{{data.name}}">
+      </span>
+    </a>
+    <app-recipe-item></app-recipe-item>
+  </div>
+</div>
